@@ -9,24 +9,18 @@ PURPLE='\033[1;35m'
 BOLD='\033[1m'
 RESET='\033[0m'
 
-# Display logo with name "RITESH"
-echo -e "${PURPLE}${BOLD}##############################################${RESET}"
-echo -e "${CYAN}${BOLD}            Welcome to RITESH's Node           ${RESET}"
-echo -e "${PURPLE}${BOLD}##############################################${RESET}"
-echo -e "\n"
+# Display custom banner with "RITESH"
+echo -e "${CYAN}${BOLD}"
+echo "RRRR   III  TTTTT  EEEEE  SSSS  H   H"
+echo "R   R   I     T    E      S      H   H"
+echo "RRRR    I     T    EEEE   SSSS   HHHHH"
+echo "R  R    I     T    E          S   H   H"
+echo "R   R  III    T    EEEEE  SSSS   H   H"
+echo -e "${RESET}"
 
-# Art visual for RITESH (stylized name in ASCII art)
-cat << "EOF"
-
-███████╗██╗████████╗███████╗████████╗██╗  ██╗███████╗██╗  ██╗
-██╔════╝██║╚══██╔══╝██╔════╝╚══██╔══╝██║  ██║██╔════╝██║  ██║
-███████╗██║   ██║   █████╗     ██║   ███████║███████╗███████║
-╚════██║██║   ██║   ██╔══╝     ██║   ██╔══██║╚════██║██╔══██║
-███████║██║   ██║   ███████╗   ██║   ██║  ██║███████║██║  ██║
-╚══════╝╚═╝   ╚═╝   ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
-
-EOF
-echo -e "${GREEN}${BOLD}Node setup initiated for RITESH...${RESET}"
+# Display message
+echo -e "${CYAN}${BOLD}---- Welcome to RITESH's Aztec Sequencer Node Setup ----${RESET}"
+sleep 2
 
 # Checking Docker installation
 echo -e "\n${CYAN}${BOLD}---- CHECKING DOCKER INSTALLATION ----${RESET}\n"
@@ -60,7 +54,7 @@ fi
 if docker info &>/dev/null; then
   echo -e "${GREEN}${BOLD}Docker is now working without sudo.${RESET}"
 else
-  echo -e "${RED}${BOLD}Failed to configure Docker to run without sudo. Using sudo for Docker commands.${RESET}."
+  echo -e "${RED}${BOLD}Failed to configure Docker to run without sudo. Using sudo for Docker commands.${RESET}"
   DOCKER_CMD="sudo docker"
 fi
 

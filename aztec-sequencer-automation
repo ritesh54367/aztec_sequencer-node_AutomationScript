@@ -9,9 +9,24 @@ PURPLE='\033[1;35m'
 BOLD='\033[1m'
 RESET='\033[0m'
 
-# Display logo or banner
-curl -s https://raw.githubusercontent.com/zunxbt/logo/main/logo.sh | bash
-sleep 3
+# Display logo with name "RITESH"
+echo -e "${PURPLE}${BOLD}##############################################${RESET}"
+echo -e "${CYAN}${BOLD}            Welcome to RITESH's Node           ${RESET}"
+echo -e "${PURPLE}${BOLD}##############################################${RESET}"
+echo -e "\n"
+
+# Art visual for RITESH (stylized name in ASCII art)
+cat << "EOF"
+
+███████╗██╗████████╗███████╗████████╗██╗  ██╗███████╗██╗  ██╗
+██╔════╝██║╚══██╔══╝██╔════╝╚══██╔══╝██║  ██║██╔════╝██║  ██║
+███████╗██║   ██║   █████╗     ██║   ███████║███████╗███████║
+╚════██║██║   ██║   ██╔══╝     ██║   ██╔══██║╚════██║██╔══██║
+███████║██║   ██║   ███████╗   ██║   ██║  ██║███████║██║  ██║
+╚══════╝╚═╝   ╚═╝   ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+
+EOF
+echo -e "${GREEN}${BOLD}Node setup initiated for RITESH...${RESET}"
 
 # Checking Docker installation
 echo -e "\n${CYAN}${BOLD}---- CHECKING DOCKER INSTALLATION ----${RESET}\n"
@@ -45,7 +60,7 @@ fi
 if docker info &>/dev/null; then
   echo -e "${GREEN}${BOLD}Docker is now working without sudo.${RESET}"
 else
-  echo -e "${RED}${BOLD}Failed to configure Docker to run without sudo. Using sudo for Docker commands.${RESET}"
+  echo -e "${RED}${BOLD}Failed to configure Docker to run without sudo. Using sudo for Docker commands.${RESET}."
   DOCKER_CMD="sudo docker"
 fi
 

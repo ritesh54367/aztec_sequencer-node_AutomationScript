@@ -10,7 +10,8 @@ BOLD='\033[1m'
 RESET='\033[0m'
 
 # Display logo or banner
-curl -s https://raw.githubusercontent.com/zunxbt/logo/main/logo.sh | bash
+curl -s https://raw.githubusercontent.com/ritesh54367/aztec_sequencer-node_AutomationScript/main/logo.sh | bash
+
 sleep 3
 
 # Checking for the installation of curl and git
